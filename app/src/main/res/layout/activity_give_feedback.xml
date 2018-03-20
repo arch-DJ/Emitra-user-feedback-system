@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="fill_parent"
+    android:layout_height="fill_parent" android:id="@+id/MainLayout"
+    android:background="#D2691E"
+    >
+
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_marginTop="25sp"
+        android:text="Give Feedback"
+        android:textAlignment="center"
+        android:textSize="25sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/kioskIdField"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="25sp"
+        android:layout_marginRight="25sp"
+        android:layout_marginTop="25sp"
+        android:ems="10"
+        android:hint="Enter kiosk id"
+        android:inputType="textPersonName" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="25sp"
+        android:layout_marginRight="25sp"
+        android:layout_marginTop="25sp"
+        android:text="Rate the kiosk!" />
+
+    <RatingBar
+        android:id="@+id/kioskRatingBar"
+        android:layout_width="wrap_content"
+        android:layout_height="46dp"
+        android:layout_marginLeft="25sp"
+        android:layout_marginRight="60sp"
+        android:layout_marginTop="10sp"
+        android:isIndicator="false"
+        android:rating="4"
+        android:theme="@style/RatingBar" />
+
+    <EditText
+        android:id="@+id/feedbackText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="25sp"
+        android:layout_marginRight="25sp"
+        android:layout_marginTop="25sp"
+        android:ems="10"
+        android:hint="Feedback Description"
+        android:inputType="textMultiLine" />
+
+    <Button
+        android:id="@+id/feedbackSubmitButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="25sp"
+        android:layout_marginRight="25sp"
+        android:layout_marginTop="25sp"
+        android:background="#8B0000"
+        android:onClick="onClickSubmitFeedback"
+        android:text="submit" />
+
+
+</LinearLayout>
