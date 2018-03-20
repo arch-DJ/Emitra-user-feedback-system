@@ -40,7 +40,7 @@ public class GiveFeedback extends AppCompatActivity {
         String kioskId = kioskIdField.getText().toString();
         String feedback = feedbackField.getText().toString();
         RatingBar ratingBar = findViewById(R.id.kioskRatingBar);
-        int rating = ratingBar.getNumStars();
+        float rating = ratingBar.getRating();
         if (kioskId.isEmpty()) {
             Toast.makeText(this, "Please enter the kiosk ID!", Toast.LENGTH_SHORT).show();
             return;
@@ -51,7 +51,7 @@ public class GiveFeedback extends AppCompatActivity {
             return;
         }
 
-        String message = "EM " + kioskId + " " + Integer.toString(rating) + " " + feedback;
+        String message = "EM " + kioskId + " " + Float.toString(rating) + " " + feedback;
         JSONObject json = new JSONObject();
         SharedPreferences sharedPreferences = getApplicationContext().getSharedPreferences("UserDetails", 0);
         String userid = sharedPreferences.getString("username", "");
