@@ -1,5 +1,6 @@
 package com.creatershub.emitrafeedback;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -62,5 +63,17 @@ public class GiveFeedback extends AppCompatActivity {
         }
         mSocket.emit("storeuserFeedback", json);
         Toast.makeText(this, "Thankyou for submitting the feedback!!", Toast.LENGTH_SHORT).show();
+    }
+
+    public void onClickLogout(View view) {
+        Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+        SharedPreferences sharedPreferences = getApplicationContext().getSharedPreferences("UserDetails", 0);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.remove("id");
+        editor.remove("username");
+        editor.remove("password");
+        editor.apply();
+        startActivity(intent);
+        finish();
     }
 }

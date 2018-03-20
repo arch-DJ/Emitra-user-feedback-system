@@ -69,5 +69,17 @@
         android:onClick="onClickSubmitFeedback"
         android:text="submit" />
 
+    <Button
+        android:id="@+id/logoutButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="170sp"
+        android:layout_marginRight="25sp"
+        android:layout_marginTop="20sp"
+        android:background="#A9A9A9"
+        android:textColor="@color/colorPrimaryDark"
+        android:onClick="onClickLogout"
+        android:text="Logout" />
+
 
 </LinearLayout>
